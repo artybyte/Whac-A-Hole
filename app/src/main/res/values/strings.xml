@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Whac-A-Mole!</string>
+    <string name="shared_preferences_name">whacamole_sprefs</string>
 </resources>
