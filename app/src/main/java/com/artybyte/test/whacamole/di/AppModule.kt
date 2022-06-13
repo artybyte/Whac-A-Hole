@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.artybyte.test.whacamole.GameState
 import com.artybyte.test.whacamole.R
-import com.artybyte.test.whacamole.ui.main.MainFragment
-import com.github.terrakok.cicerone.androidx.FragmentScreen
 import org.koin.android.ext.koin.androidApplication
 import org.koin.core.qualifier.named
 import org.koin.dsl.module

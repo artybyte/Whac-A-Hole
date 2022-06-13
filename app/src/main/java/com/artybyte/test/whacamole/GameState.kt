@@ -1,7 +1,6 @@
 package com.artybyte.test.whacamole
 
 import android.content.SharedPreferences
-import android.util.Log
 import com.artybyte.test.whacamole.observe.IPreferencesLoadedEventObservable
 import com.artybyte.test.whacamole.observe.PreferencesLoadedEventObserver
 import kotlinx.coroutines.CoroutineScope
