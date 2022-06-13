@@ -20,8 +20,7 @@
     <color name="white">#DCDCDC</color>
     <color name="creamy_white">#C8C3BB</color>
     <color name="absolute_white">#FFFFFF</color>
+    <color name="dark_black">#090909</color>
 
-    <!-- yes/no popup -->
-    <color name="popup0_background">#88101010</color>
-    <color name="popup0_frame_background">#454545</color>
+
 </resources>

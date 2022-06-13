@@ -7,33 +7,67 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import com.artybyte.test.whacamole.R
+import com.artybyte.test.whacamole.databinding.MainFragmentBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance(): MainFragment {return MainFragment()}
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        Log.e("abc", "CREATED")
     }
 
     private lateinit var viewModel: MainViewModel
+    private lateinit var binding: MainFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        binding = MainFragmentBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
+
+
+        val appearAnim = AnimationUtils.loadAnimation(this.requireContext(), R.anim.anim_appear)
+        val disappearAnim = AnimationUtils.loadAnimation(this.requireContext(), R.anim.anim_disappear)
+
+        CoroutineScope(Dispatchers.Default).launch {
+
+            this@MainFragment.requireActivity().runOnUiThread {
+                binding.imageView.startAnimation(appearAnim)
+                binding.textFor.startAnimation(appearAnim)
+            }
+            delay(3200L)
+            this@MainFragment.requireActivity().runOnUiThread {
+                binding.imageView.startAnimation(disappearAnim)
+                binding.textFor.startAnimation(disappearAnim)
+            }
+            delay(2000L)
+            this@MainFragment.requireActivity().runOnUiThread {
+                binding.textFor.visibility = View.GONE
+
+                binding.imageView.setImageResource(R.drawable.ic_whackamole)
+                binding.imageView.startAnimation(appearAnim)
+
+                binding.textGameName.visibility = View.VISIBLE
+                binding.textGameName.startAnimation(appearAnim)
+            }
+        }
     }
 
 }

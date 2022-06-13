@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- splash#2 -->
+    <dimen name="animated_splash_logo_margin">100dp</dimen>
+    <dimen name="animated_splash_logo_size">200dp</dimen>
+
+    <!-- fonts -->
+    <dimen name="animated_splash_author_label_size">11sp</dimen>
+    <dimen name="animated_splash_for_label_size">18sp</dimen>
+
+    <!-- global -->
+    <dimen name="game_name_text_size">32sp</dimen>
+</resources>

@@ -27,8 +27,6 @@ class GameState(sharedPrefsName: String,
 
         CoroutineScope(Dispatchers.Default).launch {
             loadGameScore()
-
-            delay(1500L)
             proceedMainFragment()
         }
     }

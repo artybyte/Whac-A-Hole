@@ -1,4 +1,9 @@
 <resources>
+    <!-- global -->
     <string name="app_name">Whac-A-Mole!</string>
+    <string name="app_name_with_author">developed by artybyte</string>
     <string name="shared_preferences_name">whacamole_sprefs</string>
+
+    <!-- splash -->
+    <string name="splash_made_for">Made for ABC Team</string>
 </resources>
