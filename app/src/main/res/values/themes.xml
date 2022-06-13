@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WhacAMoleTestApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowBackground">@color/app_background</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_background</item>
+        <item name="colorPrimaryVariant">@color/app_middle</item>
+        <item name="colorOnPrimary">@color/app_foreground</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/app_background</item>
+        <item name="colorSecondaryVariant">@color/app_middle</item>
+        <item name="colorOnSecondary">@color/app_foreground</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/app_splash</item>
+    </style>
+
+</resources>

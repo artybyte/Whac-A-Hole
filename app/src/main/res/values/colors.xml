@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- main app colors -->
+    <color name="app_highlight">#C7D3D3</color>
+    <color name="app_foreground">#96B0B0</color>
+    <color name="app_middle">#6B8343</color>
+    <color name="app_background">#231515</color>
+    <color name="app_progress_bar">#683131</color>
+
+    <!-- navbar color -->
+    <color name="nav_bar">@color/app_background</color>
+
+    <!-- toolbar colors -->
+    <color name="app_toolbar_bg">#556570</color>
+    <color name="app_toolbar_accent">#DADADA</color>
+
+    <!-- common colors -->
+    <color name="transparent">#00000000</color>
+    <color name="dark_semi_transparent">#20000000</color>
+    <color name="white">#DCDCDC</color>
+    <color name="creamy_white">#C8C3BB</color>
+    <color name="absolute_white">#FFFFFF</color>
+
+    <!-- yes/no popup -->
+    <color name="popup0_background">#88101010</color>
+    <color name="popup0_frame_background">#454545</color>
+</resources>
