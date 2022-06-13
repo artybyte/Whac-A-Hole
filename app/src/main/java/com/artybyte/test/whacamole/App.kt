@@ -23,6 +23,7 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
+        // Koin DI modules
         startKoin {
             androidContext(this@App)
             modules(listOf(AppModule, NavigationModule))
