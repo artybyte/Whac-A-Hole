@@ -7,7 +7,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bootscreen.BootscreenFragment">
+    tools:context=".ui.bootscreen.BootscreenFragment"
+    android:clickable="true"
+    >
 
     <TextView
         android:id="@+id/textFor"

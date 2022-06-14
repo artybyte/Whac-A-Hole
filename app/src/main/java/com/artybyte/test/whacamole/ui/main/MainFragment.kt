@@ -121,6 +121,6 @@ class MainFragment : Fragment() {
     }
 
     private fun startGame(){
-        inject<Router>().value.newRootScreen(AppScreens.Screens.game())
+        inject<Router>().value.navigateTo(AppScreens.Screens.game())
     }
 }

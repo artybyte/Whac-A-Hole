@@ -48,9 +48,8 @@ class GameState(sharedPrefsName: String,
         GameScoreCurrent = currentScore
     }
 
-    fun writeAndSaveGameRecord(score: Int){
-        GameScoreRecord = score
-        SharedPrefs.edit().putInt("score_record", score).apply()
+    fun writeAndSaveGameRecord(){
+        SharedPrefs.edit().putInt("score_record", GameScoreRecord).apply()
     }
 
     fun writeAndSaveGameCurrentScore(score: Int){

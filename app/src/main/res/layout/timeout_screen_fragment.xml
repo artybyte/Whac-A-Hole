@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_timeout_screen"
     tools:context=".ui.timeoutscreen.TimeoutScreenFragment">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:text="Timeout!" />
+        android:layout_height="100dp"
+        android:id="@+id/top_bar"
+        android:background="@color/app_middle_bright"
+        android:elevation="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/game_timeout_label"
+            android:textSize="@dimen/main_fragment_label"
+            android:gravity="center"
+            />
+    </FrameLayout>
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/infoBlock"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/app_middle_bright"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startGameButton"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_whacamole_button_bg"
+                android:fontFamily="serif"
+                android:text="@string/menu_btn_play_again"
+                android:textAllCaps="false"
+                android:textColor="@color/app_highlight"
+                android:textSize="@dimen/button_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameLabel"
+                app:layout_constraintVertical_bias="0.36" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/goToMenuButton"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_whacamole_button_bg"
+                android:fontFamily="serif"
+                android:text="@string/menu_btn_go_to_menu"
+                android:textAllCaps="false"
+                android:textColor="@color/app_highlight"
+                android:textSize="@dimen/button_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameLabel"
+                app:layout_constraintVertical_bias="0.36" />
+            <TextView
+                android:id="@+id/currentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/main_menu_game_current_score_lbl"
+                android:textColor="@color/app_highlight"
+                android:textSize="@dimen/main_fragment_record_score_label" />
+
+            <TextView
+                android:id="@+id/recordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="@string/main_menu_game_score_lbl"
+                android:textColor="@color/app_highlight"
+                android:textSize="@dimen/main_fragment_record_score_label" />
+
+            <TextView
+                android:id="@+id/recordHitLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:visibility="gone"
+                android:text="@string/game_score_record_hit"
+                android:textColor="@color/red"
+                android:textSize="@dimen/main_fragment_record_score_label" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

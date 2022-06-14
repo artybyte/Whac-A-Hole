@@ -6,16 +6,17 @@
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/app_splash.xml" value="0.4036458333333333" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/background.xml" value="0.159765625" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/button.xml" value="0.159765625" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/ic_mole.xml" value="0.13277027027027027" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/ic_mole_hole.xml" value="0.159765625" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/ic_whacamole_bg_holes.xml" value="0.159765625" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/ic_whacamole_button_bg.xml" value="0.159765625" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/drawable/main_menu_bg.xml" value="0.159765625" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/activity_splash.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/bootscreen_fragment.xml" value="0.15078125" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/game_screen_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/game_screen_fragment.xml" value="0.18" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/main_activity.xml" value="0.13" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/main_fragment.xml" value="0.16" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/timeout_screen_fragment.xml" value="0.14453125" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/layout/timeout_screen_fragment.xml" value="0.14" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/WhacAMoleTestApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22447916666666667" />
       </map>
     </option>

@@ -13,6 +13,8 @@
     <dimen name="main_fragment_game_description_label">18sp</dimen>
 
     <dimen name="game_timer_label">38sp</dimen>
+    <dimen name="game_score_label">33sp</dimen>
+    <dimen name="game_descr_labels">22sp</dimen>
 
     <!-- global -->
     <dimen name="game_name_text_size">32sp</dimen>
