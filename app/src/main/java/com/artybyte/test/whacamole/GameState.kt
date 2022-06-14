@@ -1,6 +1,7 @@
 package com.artybyte.test.whacamole
 
 import android.content.SharedPreferences
+import android.media.MediaPlayer
 import com.artybyte.test.whacamole.observe.IPreferencesLoadedEventObservable
 import com.artybyte.test.whacamole.observe.PreferencesLoadedEventObserver
 import kotlinx.coroutines.CoroutineScope
@@ -31,12 +32,38 @@ class GameState(sharedPrefsName: String,
         }
     }
 
+    fun getGameRecordScore(): Int {
+        return GameScoreRecord
+    }
+
+    fun getGameScore(): Int {
+        return GameScoreCurrent
+    }
+
+    fun setGameRecordScore(recordScore: Int) {
+        GameScoreRecord = recordScore
+    }
+
+    fun setGameScore(currentScore: Int) {
+        GameScoreCurrent = currentScore
+    }
+
+    fun writeAndSaveGameRecord(score: Int){
+        GameScoreRecord = score
+        SharedPrefs.edit().putInt("score_record", score).apply()
+    }
+
+    fun writeAndSaveGameCurrentScore(score: Int){
+        GameScoreCurrent = score
+        SharedPrefs.edit().putInt("score_current", score).apply()
+    }
+
     private fun loadGameScore(){
         if (SharedPrefs.contains("score_record")) GameScoreRecord =
-            ( SharedPrefs.getString(SharedPrefsName, "score_record")!! ).toInt()
+            SharedPrefs.getInt("score_record", 0)
 
         if (SharedPrefs.contains("score_current")) GameScoreCurrent =
-            ( SharedPrefs.getString(SharedPrefsName, "score_current")!! ).toInt()
+            SharedPrefs.getInt("score_current", 0)
     }
 
     private fun proceedMainFragment(){

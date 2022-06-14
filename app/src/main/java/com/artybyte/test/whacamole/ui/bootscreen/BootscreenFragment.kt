@@ -52,6 +52,7 @@ class BootscreenFragment : Fragment() {
         // boot screen animation sequence
 
         CoroutineScope(Dispatchers.Default).launch {
+
             this@BootscreenFragment.requireActivity().runOnUiThread {
                 binding.imageView.startAnimation(appearAnim)
                 binding.textFor.startAnimation(appearAnim)
@@ -77,7 +78,8 @@ class BootscreenFragment : Fragment() {
                 binding.textGameName.startAnimation(disappearAnim)
             }
             delay(2000L)
-            inject<Router>().value.navigateTo(AppScreens.Screens.main())
+
+            inject<Router>().value.newRootScreen(AppScreens.Screens.main())
         }
     }
 }

@@ -3,6 +3,10 @@
     <string name="app_name">Whac-A-Mole!</string>
     <string name="app_name_with_author">developed by artybyte</string>
     <string name="shared_preferences_name">whacamole_sprefs</string>
+    <string name="main_menu_game_score_lbl">Game score record: </string>
+    <string name="main_menu_game_description_text">
+        Whac-a-mole is a game about mole. This little asshole trying to eat your vegetables! You should to catch him as more times as you can in 30 seconds. Just tap on mole while it\'s showing to you! Your record will display above.
+    </string>
 
     <!-- splash -->
     <string name="splash_made_for">Made for ABC Team</string>
