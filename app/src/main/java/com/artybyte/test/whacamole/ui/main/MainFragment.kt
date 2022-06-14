@@ -41,33 +41,5 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
-
-
-        val appearAnim = AnimationUtils.loadAnimation(this.requireContext(), R.anim.anim_appear)
-        val disappearAnim = AnimationUtils.loadAnimation(this.requireContext(), R.anim.anim_disappear)
-
-        CoroutineScope(Dispatchers.Default).launch {
-
-            this@MainFragment.requireActivity().runOnUiThread {
-                binding.imageView.startAnimation(appearAnim)
-                binding.textFor.startAnimation(appearAnim)
-            }
-            delay(3200L)
-            this@MainFragment.requireActivity().runOnUiThread {
-                binding.imageView.startAnimation(disappearAnim)
-                binding.textFor.startAnimation(disappearAnim)
-            }
-            delay(2000L)
-            this@MainFragment.requireActivity().runOnUiThread {
-                binding.textFor.visibility = View.GONE
-
-                binding.imageView.setImageResource(R.drawable.ic_whackamole)
-                binding.imageView.startAnimation(appearAnim)
-
-                binding.textGameName.visibility = View.VISIBLE
-                binding.textGameName.startAnimation(appearAnim)
-            }
-        }
     }
-
 }

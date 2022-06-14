@@ -8,7 +8,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class App: Application() {
-
     private val cicerone = Cicerone.create()
     val router get() = cicerone.router
     val navigatorHolder get() = cicerone.getNavigatorHolder()
@@ -21,5 +20,6 @@ class App: Application() {
             androidContext(this@App)
             modules(listOf(AppModule, NavigationModule))
         }
+
     }
 }
